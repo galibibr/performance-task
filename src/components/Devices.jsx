@@ -1,7 +1,8 @@
-import { memo, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import DevicesTitle from "./DevicesTitle.jsx";
 import DevicesList from "./DevicesList.jsx";
-const Devices= memo(() => {
+
+export default function Devices() {
   const initedRef = useRef(false);
   const [activeTab, setActiveTab] = useState('');
   const onSelectInput = event => {
@@ -19,5 +20,4 @@ const Devices= memo(() => {
       <DevicesList activeTab={activeTab} />
     </section>
   );
-});
-export default Devices;
+}

@@ -1,6 +1,6 @@
-import { memo } from "react";
 import Event from "./Event.jsx";
-const General = memo(() => {
+
+export default function General() {
   return (
     <section className="section main__general">
       <h2 className="section__title section__title-header section__main-title">Главное</h2>
@@ -53,6 +53,5 @@ const General = memo(() => {
         </ul>
       </div>
     </section>
-  );
-});
-export default General;
+  )
+}

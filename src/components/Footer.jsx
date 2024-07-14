@@ -1,5 +1,4 @@
-import { memo } from "react";
-const Footer = memo(() => {
+export default function Footer() {
   return (
     <footer className="footer">
       <ul className="footer__list">
@@ -21,5 +20,4 @@ const Footer = memo(() => {
       </div>
     </footer>
   )
-});
-export default Footer;
+}

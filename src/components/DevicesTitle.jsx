@@ -1,6 +1,6 @@
-import React, { memo } from "react";
 import { TABS, TABS_KEYS } from "../constants.js";
-const DevicesTitle = memo(({ onSelectInput, activeTab, setActiveTab }) => {
+
+export default function DevicesTitle({ onSelectInput, activeTab, setActiveTab }) {
   return (
     <div className="section__title">
       <h2 className="section__title-header">
@@ -31,5 +31,4 @@ const DevicesTitle = memo(({ onSelectInput, activeTab, setActiveTab }) => {
       </ul>
     </div>
   );
-});
-export default DevicesTitle
+}

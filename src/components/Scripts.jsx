@@ -1,6 +1,6 @@
-import React, { memo } from "react";
 import Event from "./Event.jsx";
-const Scripts = memo(() => {
+
+export default function Scripts() {
   return (
     <section className="section main__scripts">
       <h2 className="section__title section__title-header">Избранные сценарии</h2>
@@ -39,5 +39,4 @@ const Scripts = memo(() => {
       </ul>
     </section>
   );
-});
-export default Scripts;
+}

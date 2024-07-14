@@ -1,8 +1,9 @@
-import { memo, useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { TABS, TABS_KEYS } from "../constants.js";
 import Event from "./Event.jsx";
-const DevicesList = memo(({ activeTab }) => {
-  const ref = useRef<HTMLDivElement>(null);
+
+export default function DevicesList({ activeTab }) {
+  const ref = useRef(null);
   const [hasRightScroll, setHasRightScroll] = useState(false);
   const onArrowCLick = useCallback(() => {
     const scroller = ref?.current?.querySelector('.section__panel:not(.section__panel_hidden)');
@@ -41,5 +42,4 @@ const DevicesList = memo(({ activeTab }) => {
     }
   </div>
   );
-});
-export default DevicesList;
+}

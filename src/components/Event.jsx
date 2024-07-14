@@ -1,5 +1,5 @@
-import { memo } from "react";
-const Event = memo(({ slim, icon, iconLabel, title, subtitle }) => {
+
+export default function Event({ slim, icon, iconLabel, title, subtitle }) {
   return <li className={'event' + (slim ? ' event_slim' : '')}>
     <button className="event__button">
       <span className={`event__icon event__icon_${icon}`} role="img" aria-label={iconLabel}></span>
@@ -9,5 +9,4 @@ const Event = memo(({ slim, icon, iconLabel, title, subtitle }) => {
       }
     </button>
   </li>;
-});
-export default Event;
+}

@@ -1,5 +1,6 @@
-import { memo, useState } from "react";
-const Header = memo(() => {
+import { useState } from "react";
+
+export default function Header() {
   const [expanded, setExpanded] = useState(false);
   const [toggled, setToggled] = useState(false);
   const onClick = () => {
@@ -27,5 +28,4 @@ const Header = memo(() => {
       </li>
     </ul>
   </header>;
-});
-export default Header;
+}
