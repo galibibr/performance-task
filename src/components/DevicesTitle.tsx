@@ -1,19 +1,16 @@
 import React, { memo } from "react";
 import { TABS, TABS_KEYS } from "../constants";
-
 type DevicesTitleProps = {
   onSelectInput: React.FormEventHandler<HTMLSelectElement>;
   activeTab: string;
   setActiveTab: React.Dispatch<React.SetStateAction<string>>;
 }
-
 const DevicesTitle: React.FC<DevicesTitleProps> = memo(({ onSelectInput, activeTab, setActiveTab }) => {
   return (
     <div className="section__title">
       <h2 className="section__title-header">
         Избранные устройства
       </h2>
-
       <select className="section__select" defaultValue="all" onInput={onSelectInput}>
         {TABS_KEYS.map(key =>
           <option key={key} value={key}>
@@ -21,7 +18,6 @@ const DevicesTitle: React.FC<DevicesTitleProps> = memo(({ onSelectInput, activeT
           </option>
         )}
       </select>
-
       <ul role="tablist" className="section__tabs">
         {TABS_KEYS.map(key =>
           <li
@@ -41,5 +37,4 @@ const DevicesTitle: React.FC<DevicesTitleProps> = memo(({ onSelectInput, activeT
     </div>
   );
 });
-
 export default DevicesTitle

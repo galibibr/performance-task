@@ -1,11 +1,9 @@
 import React, { memo, useCallback, useEffect, useRef, useState } from "react";
 import { TABS, TABS_KEYS } from "../constants";
 import Event from "./Event";
-
 type DevicesListProps = {
   activeTab: string;
 }
-
 const DevicesList: React.FC<DevicesListProps> = memo(({ activeTab }) => {
   const ref = useRef<HTMLDivElement>(null);
   const [hasRightScroll, setHasRightScroll] = useState(false);
@@ -19,7 +17,6 @@ const DevicesList: React.FC<DevicesListProps> = memo(({ activeTab }) => {
       });
     }
   }, []);
-
   useEffect(() => {
     const sumWidth = TABS[activeTab]?.items.length * 200;
 
@@ -30,7 +27,6 @@ const DevicesList: React.FC<DevicesListProps> = memo(({ activeTab }) => {
       }
     }
   }, [activeTab, hasRightScroll]);
-
   return (
     <div className="section__panel-wrapper" ref={ref}>
     {TABS_KEYS.map(key =>
@@ -51,5 +47,4 @@ const DevicesList: React.FC<DevicesListProps> = memo(({ activeTab }) => {
   </div>
   );
 });
-
 export default DevicesList;

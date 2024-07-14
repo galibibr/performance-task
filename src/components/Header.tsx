@@ -1,17 +1,13 @@
 import React, { memo, useState } from "react";
-
 const Header: React.FC = memo(() => {
   const [expanded, setExpanded] = useState(false);
   const [toggled, setToggled] = useState(false);
-
   const onClick = () => {
     if (!toggled) {
       setToggled(true);
     }
-
     setExpanded(!expanded);
   };
-
   return <header className="header">
     <a href="/" className="header__logo" aria-label="Яндекс.Дом"></a>
     <button className="header__menu" aria-expanded={expanded ? 'true' : 'false'} onClick={onClick}>
@@ -32,5 +28,4 @@ const Header: React.FC = memo(() => {
     </ul>
   </header>;
 });
-
 export default Header;

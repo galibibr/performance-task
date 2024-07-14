@@ -1,6 +1,5 @@
 import React, { memo } from "react";
 import Event from "./Event";
-
 const General: React.FC = memo(() => {
   return (
     <section className="section main__general">
@@ -56,5 +55,4 @@ const General: React.FC = memo(() => {
     </section>
   );
 });
-
 export default General;

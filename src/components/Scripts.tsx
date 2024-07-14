@@ -1,11 +1,9 @@
 import React, { memo } from "react";
 import Event from "./Event";
-
 const Scripts: React.FC = memo(() => {
   return (
     <section className="section main__scripts">
       <h2 className="section__title section__title-header">Избранные сценарии</h2>
-
       <ul className="event-grid">
         <Event
           slim={true}
@@ -42,5 +40,4 @@ const Scripts: React.FC = memo(() => {
     </section>
   );
 });
-
 export default Scripts;

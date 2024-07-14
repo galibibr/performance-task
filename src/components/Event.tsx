@@ -1,5 +1,4 @@
 import React, { memo } from "react";
-
 type EventProps = {
   slim?: boolean;
   icon: string;
@@ -7,7 +6,6 @@ type EventProps = {
   title: string;
   subtitle?: string;
 }
-
 const Event: React.FC<EventProps> = memo(({ slim, icon, iconLabel, title, subtitle }) => {
   return <li className={'event' + (slim ? ' event_slim' : '')}>
     <button className="event__button">
@@ -19,5 +17,4 @@ const Event: React.FC<EventProps> = memo(({ slim, icon, iconLabel, title, subtit
     </button>
   </li>;
 });
-
 export default Event;

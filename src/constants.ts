@@ -1,5 +1,4 @@
 import { TabsType } from "./types";
-
 const TABS: TabsType = {
   all: {
     title: 'Все',
@@ -111,7 +110,6 @@ for (let i = 0; i < 6; ++i) {
   TABS.all.items = [...TABS.all.items, ...TABS.all.items];
 }
 const TABS_KEYS = Object.keys(TABS);
-
 export {
   TABS,
   TABS_KEYS
