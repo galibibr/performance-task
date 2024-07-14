@@ -1,6 +1,6 @@
 import { memo, useEffect, useRef, useState } from "react";
-import DevicesTitle from "./DevicesTitle";
-import DevicesList from "./DevicesList";
+import DevicesTitle from "./DevicesTitle.jsx";
+import DevicesList from "./DevicesList.jsx";
 const Devices= memo(() => {
   const initedRef = useRef(false);
   const [activeTab, setActiveTab] = useState('');

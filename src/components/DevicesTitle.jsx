@@ -1,5 +1,5 @@
 import React, { memo } from "react";
-import { TABS, TABS_KEYS } from "../constants";
+import { TABS, TABS_KEYS } from "../constants.js";
 const DevicesTitle = memo(({ onSelectInput, activeTab, setActiveTab }) => {
   return (
     <div className="section__title">

@@ -1,6 +1,6 @@
 import { memo, useCallback, useEffect, useRef, useState } from "react";
-import { TABS, TABS_KEYS } from "../constants";
-import Event from "./Event";
+import { TABS, TABS_KEYS } from "../constants.js";
+import Event from "./Event.jsx";
 const DevicesList = memo(({ activeTab }) => {
   const ref = useRef<HTMLDivElement>(null);
   const [hasRightScroll, setHasRightScroll] = useState(false);

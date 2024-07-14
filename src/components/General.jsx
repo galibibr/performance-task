@@ -1,5 +1,5 @@
 import { memo } from "react";
-import Event from "./Event";
+import Event from "./Event.jsx";
 const General = memo(() => {
   return (
     <section className="section main__general">
