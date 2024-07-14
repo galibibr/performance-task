@@ -16,7 +16,7 @@ const DevicesList: React.FC<DevicesListProps> = memo(({ activeTab }) => {
         behavior: 'smooth'
       });
     }
-  }, []);
+  }, [ref]);
   useEffect(() => {
     const sumWidth = TABS[activeTab]?.items.length * 200;
 

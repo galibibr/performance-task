@@ -12,7 +12,7 @@ const Devices: React.FC = memo(() => {
       initedRef.current = true;
       setActiveTab(new URLSearchParams(location.search).get('tab') || 'all');
     }
-  }, [activeTab]);
+  }, [activeTab, initedRef, setActiveTab]);
   return (
     <section className="section main__devices">
       <DevicesTitle onSelectInput={onSelectInput} activeTab={activeTab} setActiveTab={setActiveTab} />
