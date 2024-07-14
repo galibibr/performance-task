@@ -5,9 +5,7 @@ import Main from './components/Main.tsx'
 import Footer from './components/Footer.tsx'
 
 ReactDOM.createRoot(document.body!).render(
-  <React.StrictMode>
     <Header />
-    <Main />
+      <Main />
     <Footer />
-  </React.StrictMode>,
 )
