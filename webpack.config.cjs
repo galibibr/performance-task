@@ -1,8 +1,5 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const HtmlWebpackPrerenderPlugin = require('html-webpack-prerender-plugin');
-
-const StaticSiteGeneratorPlugin = require("static-site-generator-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
@@ -15,16 +12,12 @@ module.exports = {
         path: path.join(__dirname, "/"), // the bundle output path
         filename: "[name].[contenthash].js", // the name of the bundle
         asyncChunks: true,
-        libraryTarget: 'umd',
     },
     plugins: [
         new HtmlWebpackPlugin({
             template: "src/index.html", // to import index.html file inside index.js
-            minify: true,
-            // inject: true,
-            // chunks: ['index'],
+            // minify: true,
         }),
-        new HtmlWebpackPrerenderPlugin({ main: '#app' }),
         // new MiniCssExtractPlugin(),
     ],
     devServer: {
@@ -37,10 +30,6 @@ module.exports = {
                 exclude: /node_modules/, // excluding the node_modules folder
                 use: {
                     loader: "babel-loader",
-                    options: {
-                        presets: ["@babel/preset-react"],    // используемые плагины
-                        // compact: true,
-                    }
                 },
             },
             {
