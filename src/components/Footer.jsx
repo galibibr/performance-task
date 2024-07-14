@@ -1,5 +1,5 @@
-import React, { memo } from "react";
-const Footer: React.FC = memo(() => {
+import { memo } from "react";
+const Footer = memo(() => {
   return (
     <footer className="footer">
       <ul className="footer__list">

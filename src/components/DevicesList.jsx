@@ -1,13 +1,9 @@
-import React, { memo, useCallback, useEffect, useRef, useState } from "react";
+import { memo, useCallback, useEffect, useRef, useState } from "react";
 import { TABS, TABS_KEYS } from "../constants";
 import Event from "./Event";
-type DevicesListProps = {
-  activeTab: string;
-}
-const DevicesList: React.FC<DevicesListProps> = memo(({ activeTab }) => {
+const DevicesList = memo(({ activeTab }) => {
   const ref = useRef<HTMLDivElement>(null);
   const [hasRightScroll, setHasRightScroll] = useState(false);
-
   const onArrowCLick = useCallback(() => {
     const scroller = ref?.current?.querySelector('.section__panel:not(.section__panel_hidden)');
     if (scroller) {
@@ -19,7 +15,6 @@ const DevicesList: React.FC<DevicesListProps> = memo(({ activeTab }) => {
   }, [ref]);
   useEffect(() => {
     const sumWidth = TABS[activeTab]?.items.length * 200;
-
     if (ref.current?.offsetWidth) {
       const newHasRightScroll = sumWidth > ref.current.offsetWidth;
       if (newHasRightScroll !== hasRightScroll) {

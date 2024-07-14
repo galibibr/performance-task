@@ -1,6 +1,6 @@
-import React, { memo } from "react";
+import { memo } from "react";
 import Event from "./Event";
-const General: React.FC = memo(() => {
+const General = memo(() => {
   return (
     <section className="section main__general">
       <h2 className="section__title section__title-header section__main-title">Главное</h2>

@@ -3,10 +3,12 @@ import ReactDOM from 'react-dom/client'
 import Header from './components/Header.tsx'
 import Main from './components/Main.tsx'
 import Footer from './components/Footer.tsx'
-ReactDOM.createRoot(document.body!).render(
-  <React.StrictMode>
+const rootEl = document.getElementById('root')
+const root = ReactDOM.createRoot(rootEl)
+root.render(
+  <>
     <Header />
     <Main />
     <Footer />
-  </React.StrictMode>,
+  </>
 )

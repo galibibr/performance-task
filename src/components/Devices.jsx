@@ -1,11 +1,11 @@
-import React, { memo, useEffect, useRef, useState } from "react";
+import { memo, useEffect, useRef, useState } from "react";
 import DevicesTitle from "./DevicesTitle";
 import DevicesList from "./DevicesList";
-const Devices: React.FC = memo(() => {
+const Devices= memo(() => {
   const initedRef = useRef(false);
   const [activeTab, setActiveTab] = useState('');
-  const onSelectInput: React.FormEventHandler<HTMLSelectElement> = event => {
-    setActiveTab((event.target as HTMLSelectElement).value);
+  const onSelectInput = event => {
+    setActiveTab(event.target.value);
   };
   useEffect(() => {
     if (!activeTab && !initedRef.current) {

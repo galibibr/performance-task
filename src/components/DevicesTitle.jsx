@@ -1,11 +1,6 @@
 import React, { memo } from "react";
 import { TABS, TABS_KEYS } from "../constants";
-type DevicesTitleProps = {
-  onSelectInput: React.FormEventHandler<HTMLSelectElement>;
-  activeTab: string;
-  setActiveTab: React.Dispatch<React.SetStateAction<string>>;
-}
-const DevicesTitle: React.FC<DevicesTitleProps> = memo(({ onSelectInput, activeTab, setActiveTab }) => {
+const DevicesTitle = memo(({ onSelectInput, activeTab, setActiveTab }) => {
   return (
     <div className="section__title">
       <h2 className="section__title-header">

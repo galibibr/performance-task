@@ -1,5 +1,4 @@
-import { TabsType } from "./types";
-const TABS: TabsType = {
+const TABS = {
   all: {
     title: 'Все',
     items: [{

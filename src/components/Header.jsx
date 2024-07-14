@@ -1,5 +1,5 @@
-import React, { memo, useState } from "react";
-const Header: React.FC = memo(() => {
+import { memo, useState } from "react";
+const Header = memo(() => {
   const [expanded, setExpanded] = useState(false);
   const [toggled, setToggled] = useState(false);
   const onClick = () => {
